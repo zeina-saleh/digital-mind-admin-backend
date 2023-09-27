@@ -11,6 +11,10 @@ app.use(cors())
 
 
 
+
+const authRoutes = require("./routes/auth.route")
+app.use("/auth", authRoutes)
+
 app.listen(8000, (err)=>{
     if(err){
         console.error(err)
