@@ -10,7 +10,8 @@ app.use(express.json())
 app.use(cors())
 
 
-
+const usersRoutes = require("./routes/users.route")
+app.use("/users", usersRoutes)
 
 const authRoutes = require("./routes/auth.route")
 app.use("/auth", authRoutes)
