@@ -1,7 +1,7 @@
 const connection = require("../configs/db.connection")
 
 
-const getTotals = async (req, res) => {
+const getCounts = async (req, res) => {
     connection.query(
         "SELECT COUNT(*) FROM users; SELECT COUNT(*) FROM collections;SELECT COUNT(*) FROM discussions;SELECT COUNT(*) FROM files", 
     (err, result) => {
@@ -9,4 +9,4 @@ const getTotals = async (req, res) => {
       });
 }
 
-module.exports = { getTotals }
+module.exports = { getCounts }
