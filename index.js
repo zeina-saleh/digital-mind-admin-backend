@@ -10,6 +10,9 @@ app.use(express.json())
 app.use(cors())
 
 
+const statsRoutes = require("./routes/stats.route")
+app.use("/stats", statsRoutes)
+
 const discussionsRoutes = require("./routes/discussions.route")
 app.use("/discussions", discussionsRoutes)
 
